@@ -1,0 +1,14 @@
+git add
+    .        #  add all
+
+git commit -m "Commit"
+
+git push
+
+git status
+    -s        # short version
+
+git diff        #  查看 staged 和 unstaged 区别
+  --  catched        #  查看 staged 和上个 staged 区别
+  HEAD        #  同时查看两种修改的区别
+

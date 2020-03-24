@@ -54,6 +54,7 @@ def gettweets(ticker):
             time.sleep(180)
 
 if __name__ == "__main__":
-    ticker = input()
-    gettweets(ticker)
+    tickers = input().split()
+    for ticker in tickers:
+        gettweets(ticker)
 

@@ -9,26 +9,25 @@ git reset        # return to odl commit
   --hard {COMMIT ID}
   
   ————————————————————————————————————
-git  checkout {COMMIT ID} -- {FILE NAME}
+git  checkout {COMMIT ID} -- {FILE NAME}    # 回退单个文件
 
 ————————————————————————————————————
 git reflog    # 查看所有更改
 
 ————————————————————————————————————
-git commit
-    -m "Commit"
-    --amend --no-edit        # 不添加任何评论
+git commit  -m "Commit"
+git commit  --amend --no-edit        # 不更改先前COMMIT
 
 ————————————————————————————————————
 git push
 
 ————————————————————————————————————
 git status
-    -s        # short version
+git status  -s        # short version
 
   ————————————————————————————————————
 git log
-    --  oneline 
+git log   --oneline 
     
 ————————————————————————————————————
 git diff        #  查看 staged 和 unstaged 区别

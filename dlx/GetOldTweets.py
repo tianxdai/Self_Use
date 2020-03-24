@@ -36,7 +36,7 @@ def gettweets(ticker):
                     print('Saved', num_tweets)
                 file.write(str(tweet.date) + '\t' + tweet.id + '\t' + tweet.hashtags + '\t' + tweet.username + '\t' + tweet.text.replace("\n", ' ') + '\n')
             i += 1
-            print(since_date, until_date, num)
+            print(since_date, until_date, num, ticker)
             
             if since_date == '2007-01-01':
                 break
@@ -51,7 +51,7 @@ def gettweets(ticker):
             file.close()
             file_closed = True
             print('Error', since_date, until_date)
-            time.sleep(180)
+            time.sleep(60)
 
 if __name__ == "__main__":
     tickers = input().split()

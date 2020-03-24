@@ -41,6 +41,12 @@ def gettweets(ticker):
             if since_date == '2007-01-01':
                 break
             
+        except AttributeError:
+            file.close()
+            file_closed = True
+            print('---------- Error: Attribute Error', since_date, until_date)
+            i += 1
+            
         except:
             file.close()
             file_closed = True
@@ -49,7 +55,5 @@ def gettweets(ticker):
 
 if __name__ == "__main__":
     ticker = input()
-    tickers = ticker.split()
-    for ticker in tickers:
-        gettweets(ticker)
+    gettweets(ticker)
 
